@@ -20,45 +20,50 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="well well-lg">
-            <h2>Simple Password Generator </h2>
+            <h2>Password Generator </h2>
             <hr>
-                <form action="passwordTest.php" method="post">
+                <form action="passwordGen.php" method="post">
                 <div class="checkbox">
-                  <label><input type="checkbox" value="">Include Numbers</label>
+                  <label><input type="checkbox" value="" id="numbers">Include Numbers</label>
                 </div>
                 <div class="checkbox">
-                  <label><input type="checkbox" value="">Include Lowercase</label>
+                  <label><input type="checkbox" value="" id="lowercase">Include Lowercase</label>
                 </div>
                 <div class="checkbox">
-                  <label><input type="checkbox" value="">Include Uppercase</label>
+                  <label><input type="checkbox" value="" id="uppercase">Include Uppercase</label>
                 </div>
                 <div class="checkbox">
-                  <label><input type="checkbox" value="">Include Special Characters: `~!@#$%^&*()_-+=</label>
+                  <label><input type="checkbox" value="" id="special">Include Special Characters: `~!@#$%^&*()_-+=</label>
                 </div>
                 <div class="checkbox">
-                  <label><input type="checkbox" value="">Exclude Ambiguous Characters: <,.>/?'";:[]{}\</label>
+                  <label><input type="checkbox" value="" id="ambiguous">Exclude Ambiguous Characters: <,.>/?'";:[]{}\</label>
                 </div>
                 <div class="form-group">
                   <label for="sel1">Select password length:</label>
                   <select class="form-control" id="sel1">
-                    <option>8</option>
-                    <option>10</option>
-                    <option>12</option>
-                    <option>14</option>
-                    <option>16</option>
-                    <option>18</option>
-                    <option>20</option>
-                    <option>22</option>
-                    <option>24</option>
-                    <option>26</option>
-                    <option>28</option>
-                    <option>30</option>
-                    <option>32</option>
+                    <option id="8">8</option>
+                    <option id="10">10</option>
+                    <option id="12">12</option>
+                    <option id="14">14</option>
+                    <option id="16">16</option>
+                    <option id="18">18</option>
+                    <option id="20">20</option>
+                    <option id="22">22</option>
+                    <option id="24">24</option>
+                    <option id="26">26</option>
+                    <option id="28">28</option>
+                    <option id="30">30</option>
+                    <option id="32">32</option>
                   </select>
                 </div>
                 <input type="submit" class="btn btn-danger" value="Generate!">
                 </form>
-                <output></output>
+                <hr>
+                <div class="row">
+                    <div class="well well-sm">
+                        <output>Password:</output>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -69,7 +74,7 @@
         <div class="col-sm-12">
             Austin Ridings &copy; <?php echo date("Y"); 
             date_default_timezone_set("America/New_York");
-            echo " The time is " . date("h:i:sa");?> 
+            echo " " . date("h:i:sa");?> 
         </div>
     </div>
 </footer>   
