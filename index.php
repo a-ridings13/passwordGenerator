@@ -20,50 +20,42 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="well well-lg">
-            <h2>Password Generator </h2>
-            <hr>
-                <form action="passwordGen.php" method="post">
-                <div class="checkbox">
-                  <label><input type="checkbox" value="" id="numbers">Include Numbers</label>
-                </div>
-                <div class="checkbox">
-                  <label><input type="checkbox" value="" id="lowercase">Include Lowercase</label>
-                </div>
-                <div class="checkbox">
-                  <label><input type="checkbox" value="" id="uppercase">Include Uppercase</label>
-                </div>
-                <div class="checkbox">
-                  <label><input type="checkbox" value="" id="special">Include Special Characters: `~!@#$%^&*()_-+=</label>
-                </div>
-                <div class="checkbox">
-                  <label><input type="checkbox" value="" id="ambiguous">Exclude Ambiguous Characters: <,.>/?'";:[]{}\</label>
-                </div>
+            <h2 style="text-align: center">Password Generator</h2>
+			     <hr>
+                <form action="#" method="post">
+					<h3>Select Options:</h3> <br/>
+						<input type="checkbox" name="symbols[]" value="abcdefghijklmnopqrstuvwxyz"> <label> Lowercase: abcdefghijklmnopqrstuvwxyz</label><br>
+						<input type="checkbox" name="symbols[]" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ"> <label> Uppercase: ABCDEFGHIJKLMNOPQRSTUVWXYZ</label><br>
+						<input type="checkbox" name="symbols[]" value="1234567890"> <label> Numbers: 1234567890</label><br>
+						<input type="checkbox" name="symbols[]" value="!@#$%^&*()-=+_`~"> <label> Special Characters: !@#$%^&*()-=+_`~</label><br>
+						<input type="checkbox" name="symbols[]" value="{}[]/\\<\>"> <label> Ambiguous Characters: {}[]/\\<\></label><br>
+                <hr>
                 <div class="form-group">
-                  <label for="sel1">Select password length:</label>
-                  <select class="form-control" id="sel1">
-                    <option id="8">8</option>
-                    <option id="10">10</option>
-                    <option id="12">12</option>
-                    <option id="14">14</option>
-                    <option id="16">16</option>
-                    <option id="18">18</option>
-                    <option id="20">20</option>
-                    <option id="22">22</option>
-                    <option id="24">24</option>
-                    <option id="26">26</option>
-                    <option id="28">28</option>
-                    <option id="30">30</option>
-                    <option id="32">32</option>
-                  </select>
+                  <label for="length">Define password length: 8 - 32 characters</label>
+		          <select name="length[]">
+        	        <option value="8">8</option>
+        	        <option value="10">10</option>
+        	        <option value="12">12</option>
+        	        <option value="14">14</option>
+        	        <option value="16">16</option>
+        	        <option value="18">18</option>
+        	        <option value="20">20</option>
+        	        <option value="22">22</option>
+        	        <option value="24">24</option>
+        	        <option value="26">26</option>
+        	        <option value="28">28</option>
+        	        <option value="30">30</option>
+        	        <option value="32">32</option>
+            	  </select>
+            	  <input type="submit" class="btn btn-danger" name="submit">
                 </div>
-                <input type="submit" class="btn btn-danger" value="Generate!">
-                </form>
                 <hr>
                 <div class="row">
-                    <div class="well well-sm">
-                        <output>Password:</output>
-                    </div>
+	                <div class="well well-sm">
+    		             <?php include 'passwordTest.php';?>
+            	    </div>
                 </div>
+                </form>
             </div>
         </div>
     </div>
